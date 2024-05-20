@@ -1,18 +1,18 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Contract, providers, utils } from "ethers";
 import axios from "axios";
+import { useAccount, useSigner } from "wagmi";
+import Image from "next/image";
+import LoadingBox from "../loadingBox";
+import Link from 'next/link';
+import TextBox from "../loadingBox/textBox";
 import {
   NFT_MARKETPLACE_ADDRESS,
   NFT_CONTRACT_ABI,
   NFT_CONTRACT_ADDRESS,
   NFT_MARKETPLACE_ABI,
 } from "../../constants/index";
-import { useAccount, useSigner } from "wagmi";
-import Image from "next/image";
-import LoadingBox from "../loadingBox";
 
-import TextBox from "../loadingBox/textBox";
 export const FavouriteNFTs = () => {
   //wagmi signer
   const { data: signer, isError, isLoading } = useSigner();
@@ -30,11 +30,9 @@ export const FavouriteNFTs = () => {
   };
   useEffect(() => {
     loadNFTs();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function loadNFTs() {
-    /* create a generic provider and query for unsold market items */
     const provider = new providers.JsonRpcProvider(
       "https://rpc.ankr.com/fantom_testnet"
     );
@@ -74,10 +72,6 @@ export const FavouriteNFTs = () => {
   }
   const favNft = nfts[0 || 1 || 3 || 7 || 6 || 5];
 
-  if (favNft != undefined) {
-    // console.log(favNft.price);
-  }
-
   const buyNFT = async (price, tokenId) => {
     setIsPurchasing(true);
 
@@ -101,9 +95,6 @@ export const FavouriteNFTs = () => {
     await router.push("/my-items");
     setIsPurchasing(false);
   };
-  // const usd = favNft.price * favNft.price;
-
-  //import FANTOMgon current pricr from coingecko
 
   const [usdPrice, setUsdPrice] = useState(null);
 
@@ -124,83 +115,84 @@ export const FavouriteNFTs = () => {
   }, []);
 
   return (
-    <>
-      <div className="second-section">
-        <div className=" container" id="Explore" data-aos="zoom-in">
-          <div className="row">
-            <div className="col50 fav"></div>
-          </div>
-          <div className="rowX nft-m">
-            <div>
-              <div className="gradient-box col50  ">
-                <div className="meta-nft col50">
-                  {favNft?.image ? (
-                    <img src={favNft?.image} alt="Nft Image" />
-                  ) : (
-                    <LoadingBox />
-                  )}
-                </div>
-                <div className="meta-text col50">
-                  {favNft?.name ? <p>{favNft?.name}</p> : <TextBox />}
+    <div className="second-section">
+      <div className="container" id="Explore" data-aos="zoom-in">
+        <div className="row">
+          <div className="col50 fav"></div>
+        </div>
+        <div className="rowX nft-m">
+          <div>
+            <div className="gradient-box col50">
+              <div className="meta-nft col50">
+                {favNft?.image ? (
+                  <img src={favNft?.image} alt="Nft Image" />
+                ) : (
+                  <LoadingBox />
+                )}
+              </div>
+              <div className="meta-text col50">
+                {favNft?.name ? <p>{favNft?.name}</p> : <TextBox />}
 
-                  {favNft?.image ? (
-                    <p>{Number(favNft?.price).toFixed(3)} FTM</p>
-                  ) : (
-                    <TextBox />
-                  )}
+                {favNft?.image ? (
+                  <p>{Number(favNft?.price).toFixed(3)} FTM</p>
+                ) : (
+                  <TextBox />
+                )}
 
-                  {favNft?.image ? (
-                    <p className="nft_price_in_usd">
-                      <span>
-                        {" "}
-                        {usdPrice && favNft
-                          ? Number(usdPrice["fantom"].usd).toFixed(2) *
-                            Number(favNft.price).toFixed(2)
-                          : null}{" "}
-                        USD{" "}
-                      </span>
-                    </p>
-                  ) : (
-                    <TextBox />
-                  )}
+                {favNft?.image ? (
+                  <p className="nft_price_in_usd">
+                    <span>
+                      {usdPrice && favNft
+                        ? Number(usdPrice["fantom"].usd).toFixed(2) *
+                          Number(favNft.price).toFixed(2)
+                        : null}{" "}
+                      USD
+                    </span>
+                  </p>
+                ) : (
+                  <TextBox />
+                )}
 
-                  {!isConnected ? (
-                    <button
-                      className="btn_fav_song_nft"
-                      onClick={connectWallet}
-                    >
-                      Buy
-                    </button>
-                  ) : (
-                    <button
-                      className="btn_fav_song_nft"
-                      onClick={() =>
-                        buyNFT(favNft?.price.toString(), favNft.tokenId)
-                      }
-                    >
-                      Buy
-                    </button>
-                  )}
-                </div>
+                {!isConnected ? (
+                  <button
+                    className="btn_fav_song_nft"
+                    onClick={connectWallet}
+                  >
+                    Buy
+                  </button>
+                ) : (
+                  <button
+                    className="btn_fav_song_nft"
+                    onClick={() =>
+                      buyNFT(favNft?.price.toString(), favNft.tokenId)
+                    }
+                  >
+                    Buy
+                  </button>
+                )}
               </div>
             </div>
-            <div className="col50 fav">
-              <h1>
-                Flip NFT Mixtape Songs <br />
-                In The PPV <Link to="https://nftv.luvnft.com" underline>NFTV</Link> Discord 
-              </h1>
-              <h2>
-                NFTpreneurs buy a Mixtape song for the low and re-sell<br />
-                it securely in the NFTV Discord broker market channel.
-              </h2>
-              <h2>
-                Create a new $FTM currency (Fantom testnet)income stream that 
-                can easily be converted to $USD.
-              </h2>
-            </div>
+          </div>
+          <div className="col50 fav">
+            <h1>
+              Flip NFT Mixtape Songs <br />
+              In The PPV{" "}
+              <Link href="https://nftv.luvnft.com" underline>
+                NFTV
+              </Link>{" "}
+              Discord
+            </h1>
+            <h2>
+              NFTpreneurs buy a Mixtape song for the low and re-sell<br />
+              it securely in the NFTV Discord broker market channel.
+            </h2>
+            <h2>
+              Create a new $FTM currency (Fantom testnet) income stream that
+              can easily be converted to $USD.
+            </h2>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
