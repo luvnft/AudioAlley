@@ -41,13 +41,14 @@ const Navbar = () => {
                       />
                     </svg>
                   </button>
-                  <a href="/" className="flex ml-2 md:mr-24 ">
+                  <div className="flex justify-between items-center h-20 px-4 bg-black text-white"></div>
+                  <a href="htttps://mixtape.luvnft.com" className="flex ml-2 md:mr-24 ">
                     <Image
                       src={Musicpng}
                       className="AudioAlley_logo"
                       alt="AudioAlley Logo"
                     />
-                    <span className="AudioAlley self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+                    <span className="AudioAlley self-center text-sm font-semibold sm:text-base whitespace-nowrap dark:text-white">
                       MIXTAPE.
                     </span>
                   </a>
