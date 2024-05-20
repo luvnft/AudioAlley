@@ -186,16 +186,16 @@ export const FavouriteNFTs = () => {
             </div>
             <div className="col50 fav">
               <h1>
-                Choose Your Favorite <br />
-                Art. If you want!
+                Flip NFT Mixtape Songs <br />
+                In The PPV <Link to="https://nftv.luvnft.com" underline>NFTV</Link> Discord 
               </h1>
               <h2>
-                Begin with the simplest and most secure stage to purchase <br />
-                and exchange advanced workmanship and NFTs
+                NFTpreneurs buy a Mixtape song for the low and re-sell<br />
+                it securely in the NFTV Discord broker market channel.
               </h2>
               <h2>
-                Audio Alley apires to recognize and reflect diverse voices by
-                taking songs to the world and unto the soul around the world.
+                Create a new $FTM currency (Fantom testnet)income stream that 
+                can easily be converted to $USD.
               </h2>
             </div>
           </div>

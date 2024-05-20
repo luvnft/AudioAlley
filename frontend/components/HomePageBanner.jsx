@@ -71,11 +71,11 @@ function HomePageBanner() {
       <div className="container rowX">
         <div className="col50 first-nft ">
           <h1 className="gather">
-            Explore NFTs artworks on our audio
+            Explore Mixtape NFTs on our audio
             <span> streaming platform. </span>{" "}
           </h1>
           <p>
-            Welcome to Audio Alley, the premier platform for music artists to
+            Welcome to Mixtape, the premier platform for music artists to
             showcase and sell their songs to a global audience. With our
             easy-to-use interface and robust features, you'll have everything
             you need to get your music out there and start earning money today.
@@ -87,13 +87,13 @@ function HomePageBanner() {
           </div>
           <div className="first-counter">
             <h2 className="works">
-              23 K+ <br /> <span> Music</span>
+              23K+ <br /> <span> Music</span>
             </h2>
             <h2 className="works">
-              20 K+ <br /> <span>Artist Profit</span>
+              20K+ <br /> <span>Artist Profit</span>
             </h2>
             <h2 className="works">
-              8 K+ <br /> <span>Artist</span>
+              8K+ <br /> <span>Artist</span>
             </h2>
           </div>
         </div>

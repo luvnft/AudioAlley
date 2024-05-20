@@ -128,9 +128,8 @@ function HomeMarketplace() {
         data-aos="flip-left"
       >
         <p>
-          Welcome to the virtual world&apos;s one-stop-shop for the very best
-          digital assets. Here you can <br />
-          search and buy creators&apos;s ASSETS with FTM.
+          Mixtape is the #1 plug for the hottest new digital asset songs
+          in the world. Search and buy Mixtape song assets with $FTM  
         </p>
 
         <div className="rowX nft-mg">
