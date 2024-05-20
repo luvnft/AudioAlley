@@ -48,7 +48,7 @@ const Navbar = () => {
                       alt="AudioAlley Logo"
                     />
                     <span className="AudioAlley self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                      AudioAlley
+                      MIXTAPE.
                     </span>
                   </a>
                 </div>
