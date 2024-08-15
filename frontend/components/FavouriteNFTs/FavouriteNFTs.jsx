@@ -175,19 +175,24 @@ export const FavouriteNFTs = () => {
           </div>
           <div className="col50 fav">
             <h1>
-              Flip NFT Mixtape Songs <br />
-              In The PPV{" "}
-              <Link href="https://nftv.luvnft.com" underline>
-                NFTV
+              Buy/Sell Mixtape Songs <br />
+              In The ATL5D{" "}
+              <Link href="https://t.me/atl5d" underline>
+                Telegram
               </Link>{" "}
-              Discord
+              channel
             </h1>
             <h2>
-              NFTpreneurs buy a Mixtape song for the low and re-sell<br />
-              it securely in the NFTV Discord broker market channel.
+              The Wizard of 
+              <Link href="https://t.me/hahznft" underline>
+                @HAHZ
+              </Link>{" "}
+              created ATL5D Mixtape. He made his first million dollars
+              selling mixtapes in Philly and moved to Atlanta after
+              hear about what happened to DJ Drama.#Atl5dMixtapHistory<br />
             </h2>
             <h2>
-              Create a new $FTM currency (Fantom testnet) income stream that
+              Create a new $FTM currency (Fantom) income stream that
               can easily be converted to $USD.
             </h2>
           </div>
