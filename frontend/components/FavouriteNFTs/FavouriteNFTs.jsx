@@ -183,13 +183,14 @@ export const FavouriteNFTs = () => {
               channel
             </h1>
             <h2>
-              The Wizard of 
+              The Wizard of Hahz 
               <Link href="https://t.me/hahznft" underline>
-                @HAHZ
+                <b> @HAHZNFT</b>
               </Link>{" "}
               created ATL5D Mixtape. He made his first million dollars
-              selling mixtapes in Philly and moved to Atlanta after
-              hear about what happened to DJ Drama.#Atl5dMixtapHistory<br />
+              at the age of 23 selling mixtapes in Philly out of his truck.
+              He quit the game and moved to Atlanta after hearing about
+              DJ Drama being locked up for selling mixtapes. #AMixtapeFact<br />
             </h2>
             <h2>
               Create a new $FTM currency (Fantom) income stream that
