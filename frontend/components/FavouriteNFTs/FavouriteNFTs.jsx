@@ -175,7 +175,7 @@ export const FavouriteNFTs = () => {
           </div>
           <div className="col50 fav">
             <h1>
-              Buy/Sell Mixtape Songs <br />
+              Buy/Sell/Barter Mixtape Songs <br />
               In The ATL5D{" "}
               <Link href="https://t.me/atl5d" underline>
                 Telegram
@@ -183,19 +183,12 @@ export const FavouriteNFTs = () => {
               channel
             </h1>
             <h2>
-              The Wizard of Hahz 
-              <Link href="https://t.me/hahznft" underline>
-                <b> @HAHZNFT</b>
-              </Link>{" "}
-              created ATL5D Mixtape. He made his first million dollars
-              at the age of 23 selling mixtapes in Philly out of his truck.
-              He quit the game and moved to Atlanta after hearing about
-              DJ Drama being locked up for selling mixtapes. #AMixtapeFact<br />
-            </h2>
-            <h2>
-              Create a new $FTM currency (Fantom) income stream that
-              can easily be converted to $USD.
-            </h2>
+               The Wizard of Hahz 
+               <Link href="https://tiktok.com/@wizardofhahz" underline>
+               <b>@WizardofHahz</b>
+               </Link>{" "}
+               is the mastermind behind creating the ATL5D Mixtape. At just 23 years old, he made his first million dollars by selling mixtapes out of his truck in Philly. However, after hearing about DJ Drama's arrest for selling mixtapes, he decided to quit the game and relocate to Atlanta. #AMixtapeFact
+               Discover how to create a new income stream using $FTM (Fantom testnet) that can be easily converted to $USD.</h2>
           </div>
         </div>
       </div>
